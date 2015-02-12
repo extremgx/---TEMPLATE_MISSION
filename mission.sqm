@@ -14,7 +14,8 @@ class Mission
 		"A3_Modules_F_HC",
 		"A3_Modules_F_Multiplayer",
 		"A3_Boat_F_Boat_Armed_01",
-		"A3_Modules_F_Supports"
+		"A3_Modules_F_Supports",
+		"A3_Structures_F_Kart_Signs_Companies"
 	};
 	addOnsAuto[]=
 	{
@@ -29,6 +30,7 @@ class Mission
 		"A3_Modules_F_Multiplayer",
 		"A3_Modules_F_Supports",
 		"A3_Boat_F_Boat_Armed_01",
+		"A3_Structures_F_Kart_Signs_Companies",
 		"a3_map_altis"
 	};
 	randomSeed=8683598;
@@ -1811,7 +1813,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=3;
+		items=4;
 		class Item0
 		{
 			position[]={3204.7234,0.086592175,3292.134};
@@ -1848,10 +1850,21 @@ class Mission
 			syncId=32;
 			synchronizations[]={22};
 		};
+		class Item3
+		{
+			position[]={3207.3057,-0.029273018,1435.5265};
+			azimut=-29.1614;
+			id=95;
+			side="EMPTY";
+			vehicle="SignAd_Sponsor_Fuel_white_F";
+			skill=0.60000002;
+			text="rAndr";
+			init="this addAction[""Refuel, Repair and Rearm"", {null = [] execVM ""RefuelAndRepair.sqf"";}];";
+		};
 	};
 	class Markers
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			position[]={3229.9238,-0.1040159,4312.8423};
@@ -2080,6 +2093,13 @@ class Mission
 			text="HC CLIENT";
 			type="mil_marker";
 			colorName="ColorCIV";
+		};
+		class Item28
+		{
+			position[]={3208.1245,0.093267627,1430.2277};
+			name="randrandr";
+			text="Refuel, repair and rearming";
+			type="loc_Fuelstation";
 		};
 	};
 	class Sensors

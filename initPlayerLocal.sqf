@@ -40,7 +40,7 @@ onRscUAVLoad = {
 //UAV shizzel by extrem-gx END
 //////////////////////////////////////////////////////////////////////////////////
 
-#define BUL_UAVintro_Text "Atomic Fox"
+#define BUL_UAVintro_Text "Template Mission"
 private ["_colorWest", "_colorEast"];
 _colorWest = [west] call BIS_fnc_sideColor;
 _colorEast = [east] call BIS_fnc_sidecolor;
@@ -60,11 +60,5 @@ _colorEast = [east] call BIS_fnc_sidecolor;
     0
 ] call BIS_fnc_establishingShot;
 
-/////////////////////////////////////////////////////////////////////////////////////////
-// NUKE RELATED STUFF
-/////////////////////////////////////////////////////////////////////////////////////////
-mdh_nuke_destruction_zone	= 2000;	// DESTRUCTION ZONE OF NUKE IN METERS, USE 0 TO DEACTIVATE
-mdh_nuke_camshake			= 1;	// CAEMRASHAKE AT NUKEDETONATION 1=ON, 0=OFF
-mdh_nuke_ash				= 1;	// ASH AFTER NUKEDETONATION 1=ON, 0=OFF
-mdh_nuke_colorcorrection	= 1;	// COLLORCORRECTION AFTER NUKEDETONATION 1=ON, 0=OFF
-/////////////////////////////////////////////////////////////////////////////////////////
+// Init for Random IEDs
+[] spawn {call compile preprocessFileLineNumbers "EPD\Ied_Init.sqf";};

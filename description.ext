@@ -5,7 +5,7 @@
 class CfgFunctions
 {
 	#include "taw_vd\CfgFunctions.hpp"
-	
+	#include "EPD\EPDcfgFunctions.hpp"
 	 // class myTag
     // {
         // class myCategory

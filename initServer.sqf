@@ -18,3 +18,6 @@ if (isNil "HeadlessVariable") then
 {
 	execVM "script.sqf";
 };
+
+// Init for Random IEDs
+[] spawn {call compile preprocessFileLineNumbers "EPD\Ied_Init.sqf";};
