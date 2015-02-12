@@ -1,0 +1,58 @@
+#include "taw_vd\dialog.hpp"
+#include "defines.hpp"
+#include "dialogs.hpp"
+
+class CfgFunctions
+{
+	#include "taw_vd\CfgFunctions.hpp"
+	
+	 // class myTag
+    // {
+        // class myCategory
+        // {        
+            // class myFunction 
+            // {
+                // postInit = 1;
+                // file = "initHC.sqf";
+            // };
+        // };
+    // };
+};
+enableDebugConsole = 1;//dangerous in MP
+respawn = 3;
+respawnDelay = 10;
+author = "Linus Meng"; // Author
+onLoadName = "TEMPLATE MISSION"; // Mission name (temporary solution; actual name set in editor will be used later in the alpha)
+onLoadMission = " For - The Crazy Legendarys. "; // Description
+//loadScreen = "loadingscreen.paa"; // Preview picture
+
+//overviewPicture = "loadingscreen.paa";
+
+class Header
+{
+	gameType = Coop;		// MP misison type
+	minPlayers = 1;
+	maxPlayers = 18;
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Over";
+		subtitle = "";
+		description = "Mission Failed.";
+		backgroundPicture = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class End2
+	{
+		title = "Mission Over";
+		subtitle = "";
+		description = "Mission Succeess!";
+		backgroundPicture = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};
